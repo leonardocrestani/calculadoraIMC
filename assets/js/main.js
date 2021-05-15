@@ -60,13 +60,11 @@ function setResult(message, isValid) {
     resultado.innerHTML = ''; // Deixa o resultado em branco
     const p = criaParagrafo(); // Chama a funcao de criacao de paragrafo
     if(isValid) {
-        resultado.classList.remove("resultado");
-        resultado.classList.add("resultado-depois");
+        resultado.classList.toggle("background-color");
         p.classList.add("paragrafo-resultado-sucesso"); // Se o imc for valido ele cria esta classe para o paragrafo
     }
     else {
-        resultado.classList.remove("resultado");
-        resultado.classList.add("resultado-depois");
+        resultado.classList.toggle("background-color");
         p.classList.add("paragrafo-resultado-err"); // Se o imc for invalido ele cria esta classe para o paragrafo
     }
     p.innerHTML = `${message}`; // Coloca a mensagem vinda dentro do paragrafo
