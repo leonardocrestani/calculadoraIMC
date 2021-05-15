@@ -61,8 +61,8 @@ div {
   display: inline-block;
 }
 
-#imcLeft {
-  margin-right: 80px;
+th {
+  text-align: left;
 }
 
 .resultado{
